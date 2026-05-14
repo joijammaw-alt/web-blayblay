@@ -1,196 +1,72 @@
 'use client';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-
-function BrewLeanBuilding() {
-  return (
-    <div style={{ position: 'relative', height: '200px', width: '100%' }}>
-      <div className="animate-float" style={{ position: 'absolute', top: '8px', right: '12%', fontSize: '2.2rem' }}>☕</div>
-      <div style={{ position: 'absolute', bottom: '0', left: '50%', transform: 'translateX(-50%)', width: '130px' }}>
-        <div style={{ background: '#6B3A1E', height: '14px', borderRadius: '6px 6px 0 0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{ color: '#F5C842', fontSize: '0.55rem', fontFamily: 'var(--font-heading)', letterSpacing: '2px' }}>BREWLEAN</span>
-        </div>
-        <div style={{ background: 'linear-gradient(160deg, #D2956C 0%, #A0522D 100%)', height: '90px', position: 'relative', boxShadow: '-6px 6px 0 rgba(0,0,0,0.15)' }}>
-          <div style={{ display: 'flex', gap: '6px', padding: '10px 14px 0' }}>
-            {[0, 1].map(i => <div key={i} style={{ width: '30px', height: '36px', background: 'rgba(255,248,200,0.85)', borderRadius: '3px', border: '2px solid #5C3A1E' }} />)}
-          </div>
-          <div style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)', width: '24px', height: '30px', background: '#4A2810', borderRadius: '3px 3px 0 0' }} />
-        </div>
-        <div style={{ background: '#C4A882', height: '6px' }} />
-      </div>
-      <div style={{ position: 'absolute', bottom: '6px', left: '6%', background: '#2C5F2E', padding: '4px 6px', borderRadius: '3px', border: '2px solid #4A3728', lineHeight: 1.3 }}>
-        <div style={{ color: 'white', fontSize: '0.5rem', fontFamily: 'var(--font-body)' }}>Good<br/>Coffee<br/>Great Day</div>
-      </div>
-      <div style={{ position: 'absolute', bottom: '6px', right: '5%', fontSize: '2rem' }}>🌳</div>
-      <div style={{ position: 'absolute', bottom: '6px', right: '20%', fontSize: '1.6rem' }}>🧑</div>
-    </div>
-  );
-}
-
-function BlayBlayBuilding() {
-  return (
-    <div style={{ position: 'relative', height: '220px', width: '100%' }}>
-      <div className="animate-float" style={{ position: 'absolute', top: '0', right: '8%', fontSize: '2.8rem' }}>🎲</div>
-      <div className="animate-float2" style={{ position: 'absolute', top: '16px', left: '6%', fontSize: '1.8rem' }}>🧩</div>
-      <div style={{ position: 'absolute', bottom: '0', left: '50%', transform: 'translateX(-50%)', width: '148px' }}>
-        <div style={{ background: '#1E3A8A', height: '10px', borderRadius: '4px 4px 0 0' }} />
-        <div style={{ background: 'linear-gradient(180deg,#1D4ED8,#1E40AF)', height: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '3px solid #93C5FD', borderBottom: 'none' }}>
-          <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.1rem', color: 'white', letterSpacing: '3px', textShadow: '0 0 12px rgba(147,197,253,0.9)' }}>BLAYBLAY</span>
-        </div>
-        <div style={{ background: 'linear-gradient(160deg,#3B82F6,#1D4ED8)', height: '110px', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '8px', boxShadow: '-6px 6px 0 rgba(0,0,0,0.2)' }}>
-          <div style={{ width: '100%', height: '56px', background: 'rgba(255,255,255,0.15)', borderRadius: '4px', border: '2px solid rgba(255,255,255,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}>
-            <span style={{ fontSize: '1.4rem' }}>🎲</span><span style={{ fontSize: '1.4rem' }}>🃏</span><span style={{ fontSize: '1.4rem' }}>♟️</span>
-          </div>
-          <div style={{ width: '28px', height: '38px', background: '#1E3A8A', borderRadius: '3px 3px 0 0', marginTop: 'auto' }} />
-        </div>
-        <div style={{ background: '#BFDBFE', height: '8px' }} />
-      </div>
-      <div style={{ position: 'absolute', bottom: '8px', left: '4%', fontSize: '1.8rem' }}>🧒</div>
-      <div style={{ position: 'absolute', bottom: '8px', right: '3%', fontSize: '1.8rem' }}>👩</div>
-    </div>
-  );
-}
-
-function PlayLabBuilding() {
-  return (
-    <div style={{ position: 'relative', height: '200px', width: '100%' }}>
-      <div className="animate-float" style={{ position: 'absolute', top: '4px', left: '8%', fontSize: '1.8rem' }}>💡</div>
-      <div className="animate-float2" style={{ position: 'absolute', top: '0', right: '5%', fontSize: '2rem' }}>🌲</div>
-      <div style={{ position: 'absolute', bottom: '0', left: '50%', transform: 'translateX(-50%)', width: '134px' }}>
-        <div style={{ background: '#0F766E', height: '32px', borderRadius: '6px 6px 0 0', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '-6px 4px 0 rgba(0,0,0,0.15)' }}>
-          <span style={{ fontSize: '1.3rem' }}>🔬</span>
-        </div>
-        <div style={{ background: 'linear-gradient(160deg,#14B8A6,#0F766E)', height: '100px', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '8px', boxShadow: '-6px 6px 0 rgba(0,0,0,0.15)' }}>
-          <div style={{ width: '100%', height: '52px', background: '#1E293B', borderRadius: '4px', border: '2px solid #475569', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1px' }}>
-            {['LEARN', 'BUILD', 'INNOVATE'].map((w, i) => (
-              <div key={i} style={{ color: i === 2 ? '#34D399' : 'rgba(255,255,255,0.9)', fontSize: '0.5rem', fontFamily: 'var(--font-heading)', letterSpacing: '1.5px' }}>{w}</div>
-            ))}
-          </div>
-          <div style={{ width: '26px', height: '36px', background: '#0F766E', borderRadius: '3px 3px 0 0', marginTop: 'auto' }} />
-        </div>
-        <div style={{ background: '#99F6E4', height: '6px' }} />
-      </div>
-      <div style={{ position: 'absolute', bottom: '6px', right: '3%', fontSize: '2rem' }}>🤖</div>
-      <div style={{ position: 'absolute', bottom: '14px', left: '4%', fontSize: '1.4rem' }}>⚡</div>
-    </div>
-  );
-}
-
-const spaces = [
-  {
-    number: '01', name: 'BrewLean', category: 'COFFEE SHOP',
-    desc: 'ไม่รู้ดื่มอะไรดี? เราเสิร์ฟกาแฟดี บรรยากาศสบาย สำหรับทุกคน',
-    building: <BrewLeanBuilding />,
-    bg: 'linear-gradient(160deg, #FFF8E7 0%, #F5E4C0 100%)',
-    badge: '#E07B39', href: '#brewlean',
-  },
-  {
-    number: '02', name: 'BlayBlay', category: 'BOARD GAME SHOP',
-    desc: 'บอร์ดเกมหลากหลาย มุมเล่นเกมสนุก สำหรับเพื่อน ครอบครัว และตัวเอง',
-    building: <BlayBlayBuilding />,
-    bg: 'linear-gradient(160deg, #EFF6FF 0%, #DBEAFE 100%)',
-    badge: '#1D4ED8', href: '#blayblay', featured: true,
-  },
-  {
-    number: '03', name: 'Blay Blay\nPlayLab', category: 'LEARN · BUILD · INNOVATE',
-    desc: 'จบ Workshop และเกร์สเรียน ด้านเทคโนโลยี สำร้างผลงานจริง ด้วยตัวเอง',
-    building: <PlayLabBuilding />,
-    bg: 'linear-gradient(160deg, #F0FDFA 0%, #CCFBF1 100%)',
-    badge: '#0F766E', href: '#playlab',
-  },
-];
+import Image from 'next/image';
+import { Clock, Users, Play, MessageCircle } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section style={{ background: 'linear-gradient(160deg,#FFF8E7 0%,#FFF0C0 50%,#FFE89A 100%)', paddingTop: '72px', position: 'relative', overflow: 'hidden' }}>
+    <section id="home" style={{ paddingTop: '120px', paddingBottom: '4rem', background: 'linear-gradient(180deg, #F8FBFF 0%, #E8F0FE 100%)', position: 'relative', overflow: 'hidden' }}>
+      
+      {/* Decorative BG elements */}
+      <div className="animate-float" style={{ position: 'absolute', top: '15%', left: '45%', color: '#FF9900', fontSize: '2rem' }}>⭐</div>
+      <div className="animate-float2" style={{ position: 'absolute', top: '25%', right: '15%', color: '#0057B8', fontSize: '3rem', opacity: 0.8 }}>🧩</div>
+      <div style={{ position: 'absolute', bottom: '-50px', left: 0, right: 0, height: '150px', background: 'white', borderRadius: '50% 50% 0 0' }} />
 
-      {/* Floating decorative blobs */}
-      {[
-        { top: '80px', left: '-60px', size: 160, color: 'rgba(255,255,255,0.7)' },
-        { top: '40px', right: '-40px', size: 120, color: 'rgba(255,255,255,0.6)' },
-        { bottom: '180px', left: '5%', size: 80, color: 'rgba(245,200,66,0.2)' },
-        { bottom: '160px', right: '4%', size: 100, color: 'rgba(224,123,57,0.15)' },
-      ].map((b, i) => (
-        <div key={i} style={{
-          position: 'absolute', top: b.top, left: (b as { left?: string }).left,
-          right: (b as { right?: string }).right, bottom: (b as { bottom?: string }).bottom,
-          width: b.size, height: b.size, borderRadius: '50%',
-          background: b.color, filter: 'blur(30px)', pointerEvents: 'none',
-        }} />
-      ))}
-
-      {/* Floating pixel blocks */}
-      {['🟨', '🟦', '🟧', '⬜'].map((em, i) => (
-        <div key={i} className={i % 2 === 0 ? 'animate-float' : 'animate-float2'}
-          style={{ position: 'absolute', fontSize: '1.6rem', opacity: 0.5,
-            top: ['15%', '25%', '55%', '40%'][i], left: i < 2 ? ['2%', '92%'][i] : undefined,
-            right: i >= 2 ? ['3%', '91%'][i - 2] : undefined,
-            animationDelay: `${i * 0.6}s`,
-          }}>
-          {em}
-        </div>
-      ))}
-
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '3rem 2rem 0' }}>
-        {/* Title */}
-        <motion.div initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}
-          style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-          <h1 style={{ fontFamily: 'var(--font-heading)', lineHeight: 1, marginBottom: '0.25rem' }}>
-            <span style={{ display: 'block', fontSize: 'clamp(2.8rem, 6vw, 5.5rem)', color: 'var(--bb-brown)' }}>3 SPACES,</span>
-            <span style={{ display: 'block', fontSize: 'clamp(2.8rem, 6vw, 5.5rem)', background: 'linear-gradient(90deg,#D4A017,#E07B39)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              ENDLESS POSSIBILITIES
-            </span>
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 2rem', display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '2rem', position: 'relative', zIndex: 10 }}>
+        
+        {/* Left Content */}
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+          <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(3.5rem, 6vw, 5rem)', color: 'var(--bb-blue)', lineHeight: 1.1, marginBottom: '1rem' }}>
+            เล่นบอร์ดเกม<br />
+            <span style={{ color: '#003366' }}>สนุกได้ทุกวัน</span>
+            <span style={{ color: '#FF9900', display: 'inline-block', marginLeft: '10px' }}>⭐</span>
           </h1>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.05rem', color: 'var(--bb-brown-light)', marginTop: '0.75rem' }}>
-            พื้นที่สำหรับทุกความสนใจ ที่นี่ที่เดียว
+          
+          <h2 style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '1.2rem', color: 'var(--bb-brown-light)', marginBottom: '1.2rem', lineHeight: 1.5 }}>
+            ร้านบอร์ดเกมกำแพงเพชร แนะนำเกมให้ เล่นเป็นภายในวันเดียว
+          </h2>
+          
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.95rem', color: 'var(--bb-text-muted)', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '480px' }}>
+            ไม่ว่าคุณจะมากับเพื่อน ครอบครัว หรือมาเดท เรามีเกมให้เลือกหลากหลายแนว มีคนสอนให้ เล่นสนุก เป็นกันเอง เริ่มเล่นได้เลย แม้ไม่เคยเล่นมาก่อน!
           </p>
+
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
+            <a href="#recommended" className="btn-primary" style={{ background: 'var(--bb-blue)', border: 'none', borderRadius: '30px', boxShadow: '0 6px 15px rgba(0,87,184,0.3)', padding: '0.8rem 1.8rem', fontSize: '1.05rem', fontFamily: 'var(--font-body)' }}>
+              <Play size={20} fill="currentColor" /> ดูเกมแนะนำ
+            </a>
+            <a href="https://line.me" target="_blank" rel="noreferrer" className="btn-primary" style={{ background: '#00B900', border: 'none', borderRadius: '30px', boxShadow: '0 6px 15px rgba(0,185,0,0.3)', padding: '0.8rem 1.8rem', fontSize: '1.05rem', fontFamily: 'var(--font-body)' }}>
+              <MessageCircle size={20} fill="currentColor" /> จองโต๊ะผ่าน LINE
+            </a>
+          </div>
+
+          <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'white', padding: '0.6rem 1.2rem', borderRadius: '20px', boxShadow: '0 2px 10px rgba(0,0,0,0.05)', fontSize: '0.9rem', color: 'var(--bb-blue)', fontWeight: 500 }}>
+              <Clock size={18} /> เปิดทุกวัน 12.00 - 21.00
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'white', padding: '0.6rem 1.2rem', borderRadius: '20px', boxShadow: '0 2px 10px rgba(0,0,0,0.05)', fontSize: '0.9rem', color: 'var(--bb-blue)', fontWeight: 500 }}>
+              <Users size={18} /> มีคนสอน - พาเล่นทุกเกม
+            </div>
+          </div>
         </motion.div>
 
-        {/* Space Cards */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.15fr 1fr', gap: '1.25rem', alignItems: 'end' }}>
-          {spaces.map((sp, i) => (
-            <motion.div key={i}
-              initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 + i * 0.15, duration: 0.6 }}
-              style={{
-                background: sp.bg, borderRadius: '20px',
-                overflow: 'hidden', position: 'relative',
-                boxShadow: sp.featured ? '0 12px 40px rgba(29,78,216,0.2)' : '0 6px 24px rgba(92,58,30,0.12)',
-                border: sp.featured ? '2px solid rgba(147,197,253,0.5)' : '2px solid rgba(245,200,66,0.2)',
-                transform: sp.featured ? 'translateY(-12px)' : 'none',
-              }}>
-              {/* Number badge */}
-              <div style={{ position: 'absolute', top: '14px', left: '14px', zIndex: 2, background: sp.badge, color: 'white', fontFamily: 'var(--font-heading)', fontSize: '1rem', padding: '2px 10px', borderRadius: '8px', letterSpacing: '1px' }}>
-                {sp.number}
-              </div>
+        {/* Right Content - Game Boxes composition */}
+        <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
+          style={{ position: 'relative', height: '100%', minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          
+          <div className="animate-float" style={{ position: 'absolute', zIndex: 3, transform: 'rotate(-10deg) scale(0.9)', left: '0%', bottom: '20%', boxShadow: '10px 10px 30px rgba(0,0,0,0.2)', borderRadius: '8px', overflow: 'hidden' }}>
+            <Image src="/home/images/690953298_1332313532099290_2726634727127638217_n.jpg" alt="Dixit" width={180} height={180} style={{ objectFit: 'cover' }} />
+          </div>
+          
+          <div className="animate-float2" style={{ position: 'absolute', zIndex: 2, transform: 'rotate(5deg) scale(0.95)', right: '10%', top: '15%', boxShadow: '10px 10px 30px rgba(0,0,0,0.2)', borderRadius: '8px', overflow: 'hidden' }}>
+            <Image src="/home/images/665990488_4463411690642997_4580202065504028951_n.jpg" alt="Carcassonne" width={190} height={190} style={{ objectFit: 'cover' }} />
+          </div>
+          
+          <div style={{ position: 'absolute', zIndex: 4, transform: 'rotate(2deg)', top: '25%', left: '25%', boxShadow: '15px 15px 40px rgba(0,0,0,0.25)', borderRadius: '8px', overflow: 'hidden', border: '4px solid white' }}>
+            <Image src="/home/images/693435817_2038086813725139_1562932010930628367_n.jpg" alt="Codenames" width={220} height={220} style={{ objectFit: 'cover' }} />
+          </div>
 
-              {/* Building illustration */}
-              <div style={{ padding: '0.5rem 0.5rem 0', minHeight: '200px' }}>
-                {sp.building}
-              </div>
-
-              {/* Text content */}
-              <div style={{ padding: '1.25rem 1.5rem 1.5rem' }}>
-                <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)', color: sp.badge, lineHeight: 1.1, marginBottom: '0.25rem', whiteSpace: 'pre-line' }}>
-                  {sp.name}
-                </h2>
-                <div style={{ fontFamily: 'var(--font-condensed)', fontWeight: 700, fontSize: '0.8rem', color: 'var(--bb-brown-light)', letterSpacing: '2px', marginBottom: '0.75rem' }}>
-                  {sp.category}
-                </div>
-                <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: 'var(--bb-brown-light)', lineHeight: 1.65, marginBottom: '1.25rem' }}>
-                  {sp.desc}
-                </p>
-                <motion.a href={sp.href} whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: sp.badge, color: 'white', fontFamily: 'var(--font-condensed)', fontWeight: 700, fontSize: '0.9rem', letterSpacing: '1.5px', padding: '0.6rem 1.4rem', borderRadius: '8px', textDecoration: 'none', transition: 'opacity 0.2s' }}
-                  onMouseEnter={e => ((e.currentTarget as HTMLElement).style.opacity = '0.88')}
-                  onMouseLeave={e => ((e.currentTarget as HTMLElement).style.opacity = '1')}
-                >
-                  EXPLORE <ArrowRight size={14} />
-                </motion.a>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+          <div style={{ position: 'absolute', right: '5%', bottom: '15%', fontSize: '4rem', filter: 'drop-shadow(2px 4px 6px rgba(0,0,0,0.1))' }}>🎲</div>
+        </motion.div>
       </div>
     </section>
   );

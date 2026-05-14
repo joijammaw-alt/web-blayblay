@@ -1,83 +1,87 @@
 'use client';
 import Link from 'next/link';
-import { Share2, Camera, Play, MessageCircle, Music } from 'lucide-react';
+import Image from 'next/image';
+import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 
-const cols = {
-  SHOP: ['All Products', 'Categories', 'New Arrival', 'Promotions'],
-  'HELP & INFO': ['คำถามที่พบบ่อย', 'การจัดส่งสินค้า', 'นโยบายการคืนสินค้า', 'ติดต่อเรา'],
-  'ABOUT US': ['เกี่ยวกับเรา', 'รีวิวลูกค้า', 'ร่วมงานกับเรา'],
-};
-const socials = [
-  { icon: <Share2 size={14} />, l: 'f' },
-  { icon: <Camera size={14} />, l: 'ig' },
-  { icon: <Play size={14} />, l: 'yt' },
-  { icon: <MessageCircle size={14} />, l: 'd' },
-  { icon: <Music size={14} />, l: 'tt' },
+const gamesRow = [
+  '/home/images/665990488_4463411690642997_4580202065504028951_n.jpg',
+  '/home/images/690953298_1332313532099290_2726634727127638217_n.jpg',
+  '/home/images/693435817_2038086813725139_1562932010930628367_n.jpg',
+  '/home/images/665990488_4463411690642997_4580202065504028951_n.jpg',
+  '/home/images/690953298_1332313532099290_2726634727127638217_n.jpg',
+  '/home/images/693435817_2038086813725139_1562932010930628367_n.jpg',
+  '/home/images/665990488_4463411690642997_4580202065504028951_n.jpg',
 ];
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#F5EDD0', borderTop: '2px solid rgba(245,200,66,0.3)', padding: '3rem 2rem 1.25rem' }}>
-      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr 1.2fr 1fr 1.5fr', gap: '2.5rem', marginBottom: '2rem' }}>
-          {/* Brand */}
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
-              <div style={{ width: '32px', height: '32px', background: 'var(--bb-amber)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem' }}>🐻</div>
-              <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', color: 'var(--bb-brown)' }}>BlayBlay</span>
+    <footer style={{ background: '#003366', color: 'white' }}>
+      {/* Game Images Row */}
+      <div style={{ display: 'flex', overflowX: 'auto', background: 'white', padding: '10px 0', borderTop: '1px solid #E8F0FE', borderBottom: '2px solid #0057B8' }}>
+        {gamesRow.map((src, i) => (
+          <div key={i} style={{ flex: '0 0 auto', width: '120px', height: '120px', margin: '0 10px', position: 'relative', borderRadius: '8px', overflow: 'hidden' }}>
+            <Image src={src} alt="Game" fill style={{ objectFit: 'cover' }} />
+          </div>
+        ))}
+      </div>
+
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '4rem 2rem 2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1.5fr 1fr', gap: '3rem', marginBottom: '3rem' }}>
+          
+          {/* Logo & Slogan */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+            <Image src="/home/images/695902101_1505839277847633_6383404664583632494_n.png" alt="BlayBlay Logo" width={80} height={80} style={{ borderRadius: '8px' }} />
+            <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', lineHeight: 1.1 }}>
+              ชวนกันมาเล่น<br/>สนุกได้ทุกวัน
             </div>
-            <p style={{ fontSize: '0.78rem', color: 'var(--bb-brown-light)', lineHeight: 1.7, marginBottom: '0.9rem', maxWidth: '200px' }}>
-              มากกว่าร้านค้า คือพื้นที่แห่งแรงบันดาลใจ<br />สำหรับทุกการใช้ชีวิตของคุณ<br />
-              ติดต่อเรา เลย 10110<br />ติดตามเราได้ที่
-            </p>
-            <div style={{ display: 'flex', gap: '0.4rem' }}>
-              {socials.map(s => (
-                <a key={s.l} href="#" aria-label={s.l}
-                  style={{ width: '28px', height: '28px', borderRadius: '6px', background: 'var(--bb-amber)', color: 'var(--bb-brown)', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', transition: 'all 0.2s' }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--bb-brown)'; (e.currentTarget as HTMLElement).style.color = 'white'; }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--bb-amber)'; (e.currentTarget as HTMLElement).style.color = 'var(--bb-brown)'; }}>
-                  {s.icon}
-                </a>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '1.1rem', marginBottom: '1.2rem', color: 'var(--bb-amber)' }}>ลิงก์ด่วน</h4>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+              {['หน้าแรก', 'เกมแนะนำ', 'หมวดหมู่', 'ข้อกำหนด'].map(l => (
+                <li key={l}>
+                  <Link href="#" style={{ color: '#E8F0FE', textDecoration: 'none', fontSize: '0.9rem', transition: 'color 0.2s' }}
+                    onMouseEnter={e => e.currentTarget.style.color = 'var(--bb-amber)'}
+                    onMouseLeave={e => e.currentTarget.style.color = '#E8F0FE'}>
+                    {l}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
-          {/* Link cols */}
-          {Object.entries(cols).map(([title, links]) => (
-            <div key={title}>
-              <h4 style={{ fontFamily: 'var(--font-condensed)', fontWeight: 700, fontSize: '0.85rem', color: 'var(--bb-brown)', letterSpacing: '1px', marginBottom: '0.7rem' }}>{title}</h4>
-              <ul style={{ listStyle: 'none' }}>
-                {links.map(l => (
-                  <li key={l} style={{ marginBottom: '0.38rem' }}>
-                    <Link href="#" style={{ fontSize: '0.78rem', color: 'var(--bb-brown-light)', textDecoration: 'none', transition: 'color 0.2s' }}
-                      onMouseEnter={e => (e.currentTarget.style.color = 'var(--bb-brown)')}
-                      onMouseLeave={e => (e.currentTarget.style.color = 'var(--bb-brown-light)')}>
-                      {l}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-
-          {/* Contact */}
+          {/* Contact Us */}
           <div>
-            <h4 style={{ fontFamily: 'var(--font-condensed)', fontWeight: 700, fontSize: '0.85rem', color: 'var(--bb-brown)', letterSpacing: '1px', marginBottom: '0.7rem' }}>CONTACT US</h4>
-            {[
-              { icon: '📞', text: '067-123-4567' },
-              { icon: '✉️', text: 'hello@blayblay.com' },
-              { icon: '🕐', text: 'อ.-ส. 19:00 – 20:00 น.' },
-            ].map((c, i) => (
-              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.45rem' }}>
-                <span style={{ fontSize: '0.9rem' }}>{c.icon}</span>
-                <span style={{ fontSize: '0.75rem', color: 'var(--bb-brown-light)' }}>{c.text}</span>
+            <h4 style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '1.1rem', marginBottom: '1.2rem', color: 'var(--bb-amber)' }}>ติดต่อเรา</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', color: '#E8F0FE', fontSize: '0.9rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}><Phone size={18} /> 09x-xxx-xxxx</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}><Mail size={18} /> @blayblay</div>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem' }}>
+                <MapPin size={18} style={{ marginTop: '2px', flexShrink: 0 }} /> 
+                <span>กำแพงเพชร (ใกล้ตลาดเทศบาล 2)<br/>จ.กำแพงเพชร 62000</span>
               </div>
-            ))}
+            </div>
           </div>
+
+          {/* Socials */}
+          <div>
+            <h4 style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '1.1rem', marginBottom: '1.2rem', color: 'var(--bb-amber)' }}>ติดตามเรา</h4>
+            <div style={{ display: 'flex', gap: '1rem' }}>
+              <a href="#" style={{ width: '40px', height: '40px', background: '#1877F2', color: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', fontWeight: 'bold' }}>FB</a>
+              <a href="#" style={{ width: '40px', height: '40px', background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)', color: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', fontWeight: 'bold' }}>IG</a>
+              <a href="#" style={{ width: '40px', height: '40px', background: '#00B900', color: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}><MessageCircle size={20} /></a>
+            </div>
+            
+            {/* Flying Dice Deco */}
+            <div style={{ marginTop: '2rem', fontSize: '3rem', opacity: 0.8, transform: 'rotate(15deg)' }}>🎲🧩</div>
+          </div>
+
         </div>
 
-        <div style={{ borderTop: '1px solid rgba(92,58,30,0.12)', paddingTop: '1rem', textAlign: 'center', fontSize: '0.75rem', color: 'var(--bb-brown-light)' }}>
-          © 2023 BlayBlay. All rights reserved. 🎲
+        <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1.5rem', textAlign: 'center', fontSize: '0.8rem', color: '#88a8c4' }}>
+          © 2024 BlayBlay Board Game Cafe. All rights reserved.
         </div>
       </div>
     </footer>

@@ -1,18 +1,20 @@
 import Navbar from "@/components/Navbar";
-import BrewLeanSection from "@/components/BrewLeanSection";
-import BoardGameSection from "@/components/BoardGameSection";
-import PlayLabSection from "@/components/PlayLabSection";
-import CommunitySection from "@/components/CommunitySection";
+import HeroSection from "@/components/HeroSection";
+import RecommendedGames from "@/components/RecommendedGames";
+import FeaturesAndCategories from "@/components/FeaturesAndCategories";
+import BeginnersGuide from "@/components/BeginnersGuide";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <BrewLeanSection />
-      <BoardGameSection />
-      <PlayLabSection />
-      <CommunitySection />
+      <HeroSection />
+      <RecommendedGames />
+      <FeaturesAndCategories />
+      <BeginnersGuide />
+      <ContactSection />
       <Footer />
     </>
   );

@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  /* BlayBlay Warm Palette */
-  --bb-cream: #FFF8E7;
-  --bb-cream-dark: #F5EDD0;
-  --bb-amber: #F5C842;
-  --bb-amber-dark: #D4A017;
-  --bb-brown: #5C3A1E;
-  --bb-brown-light: #8B5E3C;
-  --bb-orange: #E07B39;
-  --bb-green: #4A7C59;
-  --bb-blue: #2E6DA4;
+  /* BlayBlay Blue Palette */
+  --bb-cream: #F8FBFF;
+  --bb-cream-dark: #E8F0FE;
+  --bb-amber: #FF9900;
+  --bb-amber-dark: #E68A00;
+  --bb-brown: #003366;
+  --bb-brown-light: #4A6582;
+  --bb-orange: #FF9900;
+  --bb-green: #28a745;
+  --bb-blue: #0057B8;
   --bb-red: #C0392B;
 
   /* Typography - uses next/font CSS variables from layout.tsx */

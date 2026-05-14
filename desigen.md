@@ -7,4 +7,4 @@ Framer Motion
 Spline
 Swiper.js
 Lucide Icons
-โดยรูปแบบตามนี้ D:\web-blayblay\img\Gemini_Generated_Image_3v9oou3v9oou3v9o.png
+โดยรูปแบบเว็บตามรูปนี้ D:\web-blayblay\img\693638033_1600477082087382_7040032173689264953_n.png
