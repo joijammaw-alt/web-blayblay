@@ -34,9 +34,6 @@ export default function HeroSection() {
             <a href="#recommended" className="btn-primary" style={{ background: 'var(--bb-blue)', border: 'none', borderRadius: '30px', boxShadow: '0 6px 15px rgba(0,87,184,0.3)', padding: '0.8rem 1.8rem', fontSize: '1.05rem', fontFamily: 'var(--font-body)' }}>
               <Play size={20} fill="currentColor" /> ดูเกมแนะนำ
             </a>
-            <a href="https://line.me" target="_blank" rel="noreferrer" className="btn-primary" style={{ background: '#00B900', border: 'none', borderRadius: '30px', boxShadow: '0 6px 15px rgba(0,185,0,0.3)', padding: '0.8rem 1.8rem', fontSize: '1.05rem', fontFamily: 'var(--font-body)' }}>
-              <MessageCircle size={20} fill="currentColor" /> จองโต๊ะผ่าน LINE
-            </a>
           </div>
 
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>

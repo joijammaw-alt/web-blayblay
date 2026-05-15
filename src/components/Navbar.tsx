@@ -50,12 +50,7 @@ export default function Navbar() {
         </nav>
 
         {/* Actions */}
-        <div>
-          <button>
-            <MessageCircle size={18} />
-            แชทจองโต๊ะ
-          </button>
-        </div>
+        <div style={{ width: '100px' }}></div>
       </div>
     </header>
   );
