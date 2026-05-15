@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Clock, Users, Play, MessageCircle } from 'lucide-react';
+import { getBasePath } from '@/utils/basePath';
 
 export default function HeroSection() {
   return (
@@ -51,15 +52,15 @@ export default function HeroSection() {
           style={{ position: 'relative', height: '100%', minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           
           <div className="animate-float" style={{ position: 'absolute', zIndex: 3, transform: 'rotate(-10deg) scale(0.9)', left: '0%', bottom: '20%', boxShadow: '10px 10px 30px rgba(0,0,0,0.2)', borderRadius: '8px', overflow: 'hidden' }}>
-            <Image src="/images/690953298_1332313532099290_2726634727127638217_n.jpg" alt="Dixit" width={180} height={180} style={{ objectFit: 'cover' }} />
+            <Image src={getBasePath("/images/690953298_1332313532099290_2726634727127638217_n.jpg")} alt="Dixit" width={180} height={180} style={{ objectFit: 'cover' }} />
           </div>
           
           <div className="animate-float2" style={{ position: 'absolute', zIndex: 2, transform: 'rotate(5deg) scale(0.95)', right: '10%', top: '15%', boxShadow: '10px 10px 30px rgba(0,0,0,0.2)', borderRadius: '8px', overflow: 'hidden' }}>
-            <Image src="/images/665990488_4463411690642997_4580202065504028951_n.jpg" alt="Carcassonne" width={190} height={190} style={{ objectFit: 'cover' }} />
+            <Image src={getBasePath("/images/665990488_4463411690642997_4580202065504028951_n.jpg")} alt="Carcassonne" width={190} height={190} style={{ objectFit: 'cover' }} />
           </div>
           
           <div style={{ position: 'absolute', zIndex: 4, transform: 'rotate(2deg)', top: '25%', left: '25%', boxShadow: '15px 15px 40px rgba(0,0,0,0.25)', borderRadius: '8px', overflow: 'hidden', border: '4px solid white' }}>
-            <Image src="/images/693435817_2038086813725139_1562932010930628367_n.jpg" alt="Codenames" width={220} height={220} style={{ objectFit: 'cover' }} />
+            <Image src={getBasePath("/images/693435817_2038086813725139_1562932010930628367_n.jpg")} alt="Codenames" width={220} height={220} style={{ objectFit: 'cover' }} />
           </div>
 
           <div style={{ position: 'absolute', right: '5%', bottom: '15%', fontSize: '4rem', filter: 'drop-shadow(2px 4px 6px rgba(0,0,0,0.1))' }}>🎲</div>

@@ -2,12 +2,13 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { getBasePath } from '@/utils/basePath';
 
 const games = [
   {
     id: 'dixit',
     title: 'Dixit',
-    img: '/images/690953298_1332313532099290_2726634727127638217_n.jpg',
+    img: getBasePath('/images/690953298_1332313532099290_2726634727127638217_n.jpg'),
     tags: [{ t: 'เล่าเรื่อง', c: '#FF9900' }, { t: 'จินตนาการ', c: '#808080' }, { t: '3-6 คน', c: '#FF9900' }],
     desc: 'ใช้ภาพเล่าเรื่อง เปิดจินตนาการ ทายความคิดกันให้ถูกต้อง สนุก อบอุ่น และสร้างรอยยิ้มให้ทุกคนบนโต๊ะ',
     borderColor: '#FF9900'
@@ -15,7 +16,7 @@ const games = [
   {
     id: 'codenames',
     title: 'Codenames',
-    img: '/images/693435817_2038086813725139_1562932010930628367_n.jpg',
+    img: getBasePath('/images/693435817_2038086813725139_1562932010930628367_n.jpg'),
     tags: [{ t: 'ปาร์ตี้', c: '#C0392B' }, { t: 'คำศัพท์', c: '#8E44AD' }, { t: '4+ คน', c: '#C0392B' }],
     desc: 'เกมคำศัพท์สุดมันส์ แบ่งทีมลับใบ้คำ คิดเชื่อมโยง แข่งกับเวลา ยิ่งเยอะ ยิ่งสนุก!',
     borderColor: '#C0392B'
@@ -23,7 +24,7 @@ const games = [
   {
     id: 'carcassonne',
     title: 'Carcassonne',
-    img: '/images/665990488_4463411690642997_4580202065504028951_n.jpg',
+    img: getBasePath('/images/665990488_4463411690642997_4580202065504028951_n.jpg'),
     tags: [{ t: 'วางแผน', c: '#27AE60' }, { t: 'ครอบครัว', c: '#27AE60' }, { t: '2-5 คน', c: '#27AE60' }],
     desc: 'สร้างเมือง วางพื้นที่ สร้างเส้นทาง วางแผนและเก็บแต้มไปด้วยกัน เหมาะกับครอบครัวและมือใหม่',
     borderColor: '#27AE60'

@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'standalone',
   basePath: "/blayblay", // เพิ่มบรรทัดนี้เพื่อให้แอปรับรู้ว่าตัวเองอยู่ที่ /blayblay
+  assetPrefix: '/blayblay', // เพิ่มบรรทัดนี้ครับ
   trailingSlash: true,    // ช่วยให้การจัดการ Path ผ่าน Proxy เสถียรขึ้น
   images: {
     unoptimized: true,
