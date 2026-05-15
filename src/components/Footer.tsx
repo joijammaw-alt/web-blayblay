@@ -4,13 +4,13 @@ import Image from 'next/image';
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 
 const gamesRow = [
-  '/home/images/665990488_4463411690642997_4580202065504028951_n.jpg',
-  '/home/images/690953298_1332313532099290_2726634727127638217_n.jpg',
-  '/home/images/693435817_2038086813725139_1562932010930628367_n.jpg',
-  '/home/images/665990488_4463411690642997_4580202065504028951_n.jpg',
-  '/home/images/690953298_1332313532099290_2726634727127638217_n.jpg',
-  '/home/images/693435817_2038086813725139_1562932010930628367_n.jpg',
-  '/home/images/665990488_4463411690642997_4580202065504028951_n.jpg',
+  '/images/665990488_4463411690642997_4580202065504028951_n.jpg',
+  '/images/690953298_1332313532099290_2726634727127638217_n.jpg',
+  '/images/693435817_2038086813725139_1562932010930628367_n.jpg',
+  '/images/665990488_4463411690642997_4580202065504028951_n.jpg',
+  '/images/690953298_1332313532099290_2726634727127638217_n.jpg',
+  '/images/693435817_2038086813725139_1562932010930628367_n.jpg',
+  '/images/665990488_4463411690642997_4580202065504028951_n.jpg',
 ];
 
 export default function Footer() {
@@ -30,7 +30,7 @@ export default function Footer() {
           
           {/* Logo & Slogan */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-            <Image src="/home/images/695902101_1505839277847633_6383404664583632494_n.png" alt="BlayBlay Logo" width={80} height={80} style={{ borderRadius: '8px' }} />
+            <Image src="/images/695902101_1505839277847633_6383404664583632494_n.png" alt="BlayBlay Logo" width={80} height={80} style={{ borderRadius: '8px' }} />
             <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', lineHeight: 1.1 }}>
               ชวนกันมาเล่น<br/>สนุกได้ทุกวัน
             </div>

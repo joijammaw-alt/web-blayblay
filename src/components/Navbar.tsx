@@ -34,7 +34,7 @@ export default function Navbar() {
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 2rem', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         {/* Logo */}
         <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-          <Image src="/home/images/695902101_1505839277847633_6383404664583632494_n.png" alt="BlayBlay Logo" width={60} height={60} style={{ objectFit: 'contain' }} />
+          <Image src="/images/695902101_1505839277847633_6383404664583632494_n.png" alt="BlayBlay Logo" width={60} height={60} style={{ objectFit: 'contain' }} />
         </Link>
 
         {/* Nav */}
