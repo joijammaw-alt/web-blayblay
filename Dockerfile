@@ -49,3 +49,5 @@ ENV HOSTNAME "0.0.0.0"
 
 # Run the standalone server
 CMD ["node", "server.js"]
+
+COPY --from=builder /app/prisma ./prisma
