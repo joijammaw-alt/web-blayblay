@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "BlayBlay ร้านบอร์ดเกมออนไลน์ มากกว่า 1,000+ เกม ของแท้ 100% จัดส่งทั่วไทย 1-2 วัน Family Game, Strategy, Party Game และอีกมากมาย",
   keywords: "บอร์ดเกม, board game, ร้านบอร์ดเกม, BlayBlay, เกมครอบครัว, strategy game",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/img/695902101_1505839277847633_6383404664583632494_n.png",
   },
 };
 
