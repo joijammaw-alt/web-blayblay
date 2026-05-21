@@ -10,11 +10,22 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <HeroSection />
-      <RecommendedGames />
-      <FeaturesAndCategories />
-      <BeginnersGuide />
-      <ContactSection />
+      {/* ใส่ id ครอบแต่ละส่วนไว้ */}
+      <section id="home">
+        <HeroSection />
+      </section>
+      <section id="recommended">
+        <RecommendedGames />
+      </section>
+      <section id="categories">
+        <FeaturesAndCategories />
+      </section>
+      <section id="beginners">
+        <BeginnersGuide />
+      </section>
+      <section id="contact">
+        <ContactSection />
+      </section>
       <Footer />
     </>
   );
