@@ -47,7 +47,9 @@ ENV PORT 3000
 # set hostname to localhost
 ENV HOSTNAME "0.0.0.0"
 
+COPY --from=builder /app/prisma ./prisma
+
 # Run the standalone server
 CMD ["node", "server.js"]
 
-COPY --from=builder /app/prisma ./prisma
+
