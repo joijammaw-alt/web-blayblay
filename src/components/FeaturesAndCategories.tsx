@@ -1,5 +1,4 @@
 'use client';
-import { motion } from 'framer-motion';
 import { PartyPopper, Users, Map, Lightbulb, UserCheck, UsersRound, GraduationCap, Smile, Package, MessageCircle } from 'lucide-react';
 
 const categories = [
@@ -28,12 +27,13 @@ export default function FeaturesAndCategories() {
           <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', color: 'var(--bb-blue)', marginBottom: '2rem' }}>เลือกเกมตามสไตล์ที่ใช่</h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' }}>
             {categories.map((cat, i) => (
-              <motion.div key={cat.label} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.1 }}
-                style={{ background: cat.bg, border: `1px solid ${cat.color}30`, borderRadius: '16px', padding: '1.5rem 1rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '0.8rem', cursor: 'pointer', transition: 'all 0.2s' }}
-                whileHover={{ y: -5, boxShadow: `0 8px 20px ${cat.color}20` }}>
+              <div key={cat.label} className="animate-fade-up"
+                style={{ background: cat.bg, border: `1px solid ${cat.color}30`, borderRadius: '16px', padding: '1.5rem 1rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '0.8rem', cursor: 'pointer', transition: 'all 0.2s', animationDelay: `${i * 0.05}s` }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(-5px)'; (e.currentTarget as HTMLElement).style.boxShadow = `0 8px 20px ${cat.color}20`; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = 'translateY(0px)'; (e.currentTarget as HTMLElement).style.boxShadow = 'none'; }}>
                 <div style={{ color: cat.color }}>{cat.icon}</div>
                 <div style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '0.9rem', color: cat.color }}>{cat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -43,14 +43,14 @@ export default function FeaturesAndCategories() {
           <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', color: 'var(--bb-blue)', marginBottom: '2rem' }}>ทำไมต้องที่ BLAY BLAY?</h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.25rem' }}>
             {features.map((feat, i) => (
-              <motion.div key={feat.title} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }}
-                style={{ background: 'white', border: '1px solid #E8F0FE', borderRadius: '16px', padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', boxShadow: '0 4px 15px rgba(0,0,0,0.03)' }}>
+              <div key={feat.title} className="animate-fade-up"
+                style={{ background: 'white', border: '1px solid #E8F0FE', borderRadius: '16px', padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', boxShadow: '0 4px 15px rgba(0,0,0,0.03)', animationDelay: `${i * 0.05}s` }}>
                 <div style={{ color: feat.color, marginBottom: '1rem', background: `${feat.color}15`, padding: '1rem', borderRadius: '50%' }}>
                   {feat.icon}
                 </div>
                 <div style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '1rem', color: 'var(--bb-blue)', marginBottom: '0.5rem' }}>{feat.title}</div>
                 <div style={{ fontSize: '0.85rem', color: 'var(--bb-text-muted)', lineHeight: 1.5 }}>{feat.desc}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

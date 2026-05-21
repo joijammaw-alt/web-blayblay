@@ -1,5 +1,4 @@
 'use client';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Clock, Users, Play, MessageCircle } from 'lucide-react';
 
@@ -15,7 +14,7 @@ export default function HeroSection() {
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 2rem', display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '2rem', position: 'relative', zIndex: 10 }}>
         
         {/* Left Content */}
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+        <div className="animate-fade-up">
           <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(3.5rem, 6vw, 5rem)', color: 'var(--bb-blue)', lineHeight: 1.1, marginBottom: '1rem' }}>
             เล่นบอร์ดเกม<br />
             <span style={{ color: '#003366' }}>สนุกได้ทุกวัน</span>
@@ -47,11 +46,11 @@ export default function HeroSection() {
               <Users size={18} /> มีคนสอน - พาเล่นทุกเกม
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Right Content - Game Boxes composition */}
-        <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
-          style={{ position: 'relative', height: '100%', minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="animate-fade-up"
+          style={{ position: 'relative', height: '100%', minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', animationDelay: '0.2s' }}>
           
           <div className="animate-float" style={{ position: 'absolute', zIndex: 3, transform: 'rotate(-10deg) scale(0.9)', left: '0%', bottom: '20%', boxShadow: '10px 10px 30px rgba(0,0,0,0.2)', borderRadius: '8px', overflow: 'hidden' }}>
             <Image src="/img/690953298_1332313532099290_2726634727127638217_n.jpg" alt="Dixit" width={180} height={180} style={{ objectFit: 'cover' }} />
@@ -66,8 +65,9 @@ export default function HeroSection() {
           </div>
 
           <div style={{ position: 'absolute', right: '5%', bottom: '15%', fontSize: '4rem', filter: 'drop-shadow(2px 4px 6px rgba(0,0,0,0.1))' }}>🎲</div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 }
+

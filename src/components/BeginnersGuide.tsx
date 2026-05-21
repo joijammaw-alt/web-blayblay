@@ -1,5 +1,4 @@
 'use client';
-import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 const steps = [
@@ -37,8 +36,8 @@ export default function BeginnersGuide() {
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '1rem', position: 'relative' }}>
           
           {steps.map((step, i) => (
-            <motion.div key={step.num} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.2 }}
-              style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative' }}>
+            <div key={step.num} className="animate-fade-up"
+              style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative', animationDelay: `${i * 0.1}s` }}>
               
               <div style={{ background: '#F8FBFF', border: '1px solid #E8F0FE', borderRadius: '16px', padding: '2rem 1.5rem', width: '100%', maxWidth: '340px', position: 'relative', boxShadow: '0 4px 15px rgba(0,0,0,0.03)', textAlign: 'center' }}>
                 
@@ -60,7 +59,7 @@ export default function BeginnersGuide() {
                   <ArrowRight size={32} style={{ marginLeft: '-15px' }} />
                 </div>
               )}
-            </motion.div>
+            </div>
           ))}
 
         </div>

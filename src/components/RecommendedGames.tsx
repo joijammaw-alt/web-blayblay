@@ -1,9 +1,34 @@
 'use client';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const games = [
+interface RecommendedGameFromDb {
+  id: string;
+  title: string;
+  tags: string[];
+  desc: string;
+  img: string;
+}
+
+interface RecommendedGamesProps {
+  initialGames?: RecommendedGameFromDb[];
+}
+
+const tagColorMap: Record<string, string> = {
+  'เล่าเรื่อง': '#FF9900',
+  'จินตนาการ': '#808080',
+  '3-6 คน': '#FF9900',
+  'ปาร์ตี้': '#C0392B',
+  'คำศัพท์': '#8E44AD',
+  '4+ คน': '#C0392B',
+  'วางแผน': '#27AE60',
+  'ครอบครัว': '#27AE60',
+  '2-5 คน': '#27AE60',
+};
+
+const getTagColor = (tag: string) => tagColorMap[tag] || '#555555';
+
+const defaultGames = [
   {
     id: 'dixit',
     title: 'Dixit',
@@ -30,7 +55,28 @@ const games = [
   }
 ];
 
-export default function RecommendedGames() {
+export default function RecommendedGames({ initialGames }: RecommendedGamesProps) {
+  // Use DB data if provided and not empty, otherwise fallback to original mock data
+  const games = (initialGames && initialGames.length > 0) 
+    ? initialGames.map(game => {
+        const mappedTags = game.tags.map(tag => ({
+          t: tag,
+          c: getTagColor(tag)
+        }));
+        
+        // Derive border color from first tag, fallback to Dixit's orange if not set
+        const borderColor = mappedTags.length > 0 ? mappedTags[0].c : '#FF9900';
+        
+        return {
+          id: game.id,
+          title: game.title,
+          img: game.img,
+          tags: mappedTags,
+          desc: game.desc,
+          borderColor: borderColor
+        };
+      })
+    : defaultGames;
   return (
     <section id="recommended" style={{ padding: '4rem 2rem', background: 'white' }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
@@ -49,8 +95,8 @@ export default function RecommendedGames() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', width: '100%' }}>
             {games.map((game, i) => (
-              <motion.div key={game.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }}
-                style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.06)', border: `1px solid ${game.borderColor}30` }}>
+              <div key={game.id} className="animate-fade-up"
+                style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.06)', border: `1px solid ${game.borderColor}30`, animationDelay: `${i * 0.1}s` }}>
                 
                 <div style={{ height: '220px', position: 'relative', background: '#f5f5f5' }}>
                   <Image src={game.img} alt={game.title} fill style={{ objectFit: 'cover' }} />
@@ -78,7 +124,7 @@ export default function RecommendedGames() {
                   </button>
                 </div>
 
-              </motion.div>
+              </div>
             ))}
           </div>
 

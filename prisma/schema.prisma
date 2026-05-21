@@ -1,0 +1,18 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model RecommendedGame {
+  id        String   @id @default(uuid())
+  title     String
+  tags      String[]
+  desc      String
+  img       String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
