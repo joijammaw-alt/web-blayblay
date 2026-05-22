@@ -10,9 +10,10 @@ const navLinks = [
   { label: "เกมแนะนำ", href: "#recommended" },
   { label: "หมวดหมู่", href: "#categories" },
   { label: "มือใหม่เริ่มที่นี่", href: "#beginners" },
+  { label: "ติดต่อร้าน", href: "#contact" },
   { label: "Brewlean", href: "https://blayblay.com/brewlean" },
   { label: "Playlab", href: "https://blayblay.com/playlab" },
-  { label: "ติดต่อร้าน", href: "#contact" },
+  { label: "Blog", href: "https://blayblay.com/blog" },
 ];
 
 export default function Navbar() {
